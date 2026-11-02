@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tiwa n Tiwa D’Journey – Tickets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c0b1f;--indigo:#1a2468;--gold:#f0b429;--gold2:#c98a12;--cream:#f7ecd2;--clay:#b8452a;--card:#15163a;--line:rgba(240,180,41,.35);--mut:#b9b4cf;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark}}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:Figtree,system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+.adire{background-color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%23f0b429' stroke-opacity='.09' stroke-width='2'%3E%3Cpath d='M24 2 46 24 24 46 2 24Z'/%3E%3Cpath d='M24 12 36 24 24 36 12 24Z'/%3E%3Ccircle cx='24' cy='24' r='3'/%3E%3C/g%3E%3C/svg%3E")}
+.strip{height:22px;background:repeating-linear-gradient(90deg,var(--gold) 0 14px,var(--ink) 14px 20px,var(--clay) 20px 34px,var(--ink) 34px 40px);clip-path:polygon(0 0,100% 0,100% 100%,0 100%);opacity:.9}
+.strip.z{background:repeating-conic-gradient(from 45deg at 50% 50%,var(--gold) 0 25%,var(--ink) 0 50%) 0 0/22px 22px;height:22px}
+header.hero{position:relative;padding:36px 20px 56px;text-align:center;background:radial-gradient(ellipse at 50% 30%,#2a3190 0,transparent 60%),var(--ink)}
+.hero h1{font-family:'Rozha One',serif;font-weight:400;font-size:clamp(3.2rem,13vw,8.5rem);line-height:.9;margin:8px 0 0;letter-spacing:.01em;background:linear-gradient(180deg,#ffe08a,var(--gold) 45%,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 0 #5a3a05)}
+.hero .sub{display:inline-block;margin-top:14px;padding:6px 26px;background:var(--gold);color:var(--ink);font-family:'Rozha One',serif;font-size:clamp(1.1rem,4vw,1.8rem);transform:skewX(-8deg)}
+.drumwrap{margin:28px auto 0;width:min(300px,70vw);cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;background:none;border:0;padding:0;display:block}
+.drumwrap svg{width:100%;height:auto;overflow:visible}
+.drumwrap.hit svg{animation:thump .5s}
+@keyframes thump{0%{transform:rotate(-2deg) scale(1)}20%{transform:rotate(5deg) scale(1.07)}45%{transform:rotate(-4deg) scale(.97)}100%{transform:none}}
+.hint{font-size:.9rem;color:var(--mut);margin-top:6px}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:26px auto 0;max-width:900px}
+.fact{border:1px solid var(--line);padding:10px 20px;background:rgba(21,22,58,.7);border-radius:2px 18px 2px 18px}
+.fact b{display:block;font-family:'Rozha One',serif;font-weight:400;color:var(--gold);font-size:1.3rem}
+.fact span{font-size:.85rem;color:var(--mut)}
+main{max-width:1100px;margin:0 auto;padding:44px 18px 80px;display:grid;grid-template-columns:1.35fr 1fr;gap:34px}
+@media(max-width:860px){main{grid-template-columns:1fr}}
+h2{font-family:'Rozha One',serif;font-weight:400;font-size:2rem;margin:0 0 4px;color:var(--gold)}
+.lead{color:var(--mut);margin:0 0 22px;max-width:46ch}
+.tier{display:grid;grid-template-columns:8px 1fr auto;gap:0 16px;align-items:center;background:var(--card);border:1px solid var(--line);margin-bottom:12px;padding:14px 16px 14px 0;position:relative;border-radius:2px 16px 2px 16px;transition:border-color .2s}
+.tier.on{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 8px 30px rgba(240,180,41,.15)}
+.tier .bar{align-self:stretch;margin:-14px 0;background:var(--c)}
+.tier h3{margin:0;font-family:'Rozha One',serif;font-weight:400;font-size:1.35rem;letter-spacing:.02em}
+.tier p{margin:0;font-size:.85rem;color:var(--mut)}
+.price{font-weight:700;color:var(--gold);font-size:1.15rem;margin-top:2px}
+.qty{display:flex;align-items:center;gap:4px}
+.qty button{width:38px;height:38px;border-radius:50%;border:1px solid var(--gold);background:transparent;color:var(--gold);font-size:1.3rem;cursor:pointer;line-height:1}
+.qty button:hover{background:var(--gold);color:var(--ink)}
+.qty output{min-width:30px;text-align:center;font-weight:700;font-size:1.1rem}
+button:focus-visible,input:focus-visible{outline:3px solid #fff;outline-offset:2px}
+aside .box{position:sticky;top:16px;background:var(--cream);color:var(--ink);padding:24px;border-radius:2px 26px 2px 26px;border:3px double var(--gold2)}
+aside h2{color:var(--clay)}
+.line{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed #b9a56d;font-size:.95rem}
+.total{display:flex;justify-content:space-between;font-family:'Rozha One',serif;font-size:1.6rem;margin:14px 0}
+label{display:block;font-size:.85rem;font-weight:600;margin:10px 0 3px}
+input{width:100%;padding:11px 12px;border:1.5px solid #8b7a45;background:#fffaf0;font:inherit;border-radius:6px;color:var(--ink)}
+.pay{width:100%;margin-top:16px;padding:15px;border:0;font:inherit;font-weight:700;font-size:1.05rem;background:var(--ink);color:var(--gold);cursor:pointer;border-radius:2px 14px 2px 14px;box-shadow:4px 4px 0 var(--gold2)}
+.pay:disabled{opacity:.45;cursor:not-allowed}
+.err{color:var(--clay);font-size:.85rem;min-height:1.2em;margin:8px 0 0}
+.small{font-size:.78rem;color:#5b5230;margin:10px 0 0}
+#done{display:none;max-width:1100px;margin:0 auto;padding:44px 18px 80px}
+#done.show{display:block}
+.thanks{text-align:center;margin-bottom:28px}
+.thanks h2{font-size:clamp(2rem,7vw,3.4rem)}
+.tk{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);padding:14px 18px;margin-bottom:10px;border-radius:2px 14px 2px 14px}
+.btn{padding:11px 20px;border:1px solid var(--gold);background:var(--gold);color:var(--ink);font:inherit;font-weight:700;cursor:pointer;border-radius:2px 12px 2px 12px}
+.btn.o{background:transparent;color:var(--gold)}
+.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0}
+canvas.pv{max-width:100%;height:auto;border:1px solid var(--line);margin:14px auto;display:block}
+footer{text-align:center;padding:26px 16px 36px;color:var(--mut);font-size:.9rem}
+footer b{color:var(--gold)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body class="adire">
+<div class="strip z"></div>
+<header class="hero">
+  <h1>Tiwa n Tiwa</h1>
+  <span class="sub">D’Journey</span>
+  <button class="drumwrap" id="drum" aria-label="Play the talking drum">
+    <svg viewBox="0 0 300 330" aria-hidden="true">
+      <defs>
+        <linearGradient id="wd" x1="0" x2="1"><stop offset="0" stop-color="#4a2410"/><stop offset=".45" stop-color="#b9702c"/><stop offset="1" stop-color="#3a1b0b"/></linearGradient>
+        <radialGradient id="sk" cx=".4" cy=".35"><stop offset="0" stop-color="#fff1cc"/><stop offset="1" stop-color="#d9b575"/></radialGradient>
+      </defs>
+      <path d="M62 52C100 120 100 190 62 262H238C200 190 200 120 238 52Z" fill="url(#wd)" stroke="#2a1206" stroke-width="3"/>
+      <g stroke="#f0b429" stroke-width="3" fill="none" opacity=".9">
+        <path d="M70 66 230 92M70 66 230 66M78 88 222 88M92 110 208 110M100 140 200 140M96 172 204 172M86 202 214 202M76 234 224 234M70 66l120 170M230 66 110 236M96 80 196 230M204 80 104 230"/>
+      </g>
+      <path d="M88 150h124" stroke="#b8452a" stroke-width="10" opacity=".9"/>
+      <ellipse cx="150" cy="52" rx="92" ry="26" fill="url(#sk)" stroke="#3a1b0b" stroke-width="6"/>
+      <ellipse cx="150" cy="52" rx="62" ry="15" fill="none" stroke="#b9702c" stroke-width="2"/>
+      <ellipse cx="150" cy="264" rx="92" ry="26" fill="url(#sk)" stroke="#3a1b0b" stroke-width="6"/>
+      <path d="M262 18c28 20 30 70 10 100" stroke="#6b3a14" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="276" cy="122" r="12" fill="#b9702c" stroke="#3a1b0b" stroke-width="3"/>
+    </svg>
+  </button>
+  <div class="hint">Tap the drum. Let it speak.</div>
+  <div class="facts">
+    <div class="fact"><b id="fDate">Date to be announced</b><span>Date</span></div>
+    <div class="fact"><b id="fTime">Time to be announced</b><span>Time</span></div>
+    <div class="fact"><b id="fLoc">Venue to be announced</b><span>Location</span></div>
+  </div>
+</header>
+<div class="strip"></div>
+
+<main id="shop">
+  <section>
+    <h2>Choose your seat in the journey</h2>
+    <p class="lead">Pick as many tickets as you need, across any tiers. Each ticket is issued separately with its own code.</p>
+    <div id="tiers"></div>
+  </section>
+  <aside>
+    <div class="box">
+      <h2>Your order</h2>
+      <div id="lines"><p style="margin:0;color:#6b6034">No tickets chosen yet. Add one from the list.</p></div>
+      <div class="total"><span>Total</span><span id="tot">₦0</span></div>
+      <label for="nm">Full name</label><input id="nm" autocomplete="name" placeholder="Adebisi Ogunleye">
+      <label for="em">Email (your tickets are sent here)</label><input id="em" type="email" autocomplete="email" placeholder="you@example.com">
+      <label for="ph">Phone number</label><input id="ph" type="tel" autocomplete="tel" placeholder="0904 000 0000">
+      <p class="err" id="err" role="alert"></p>
+      <button class="pay" id="pay" disabled>Pay with Paystack</button>
+      <p class="small">Payments are processed securely by Paystack. Your ticket and receipt appear here as soon as payment is confirmed.</p>
+    </div>
+  </aside>
+</main>
+
+<section id="done">
+  <div class="thanks"><h2>Ẹ ṣé! Payment confirmed.</h2><p class="lead" style="margin:0 auto">Your receipt and tickets are ready. Download them now and show the ticket at the gate.</p></div>
+  <div class="row"><button class="btn" id="dlAll">Download all tickets</button><button class="btn o" id="dlRec">Download receipt</button></div>
+  <div id="tkList"></div>
+  <canvas id="recPv" class="pv" width="600" height="400" style="display:none"></canvas>
+  <div class="row"><button class="btn o" id="again">Buy more tickets</button></div>
+</section>
+
+<div class="strip"></div>
+<footer>Enquiries: <b>0904 5791 503</b> · Instagram <b>@Abike_ilu</b> · Facebook <b>Abike ilu</b> · TikTok <b>Abikeilu27_</b></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+/* ============ EDIT THESE ============ */
+const CONFIG={
+  eventName:"Tiwa n Tiwa D’Journey",
+  date:"",time:"",venue:"",            // fill when announced, e.g. "Sat, 6 Dec 2026"
+  paystackKey:"pk_test_xxxxxxxxxxxxxxxxxxxx",  // your Paystack public key
+  currency:"NGN",
+  onPaymentSuccess:null                  // optional: (ref, order) => send to your server to verify + email tickets
+};
+const TIERS=[
+ {id:"oge",name:"Oge",price:5000,note:"General entry",c:"#8fa3ff"},
+ {id:"ijo",name:"Ijo",price:10000,note:"Standard seating",c:"#6bd6a6"},
+ {id:"iya",name:"Iya Ilu",price:20000,note:"Preferred seating",c:"#f0b429"},
+ {id:"gud",name:"Gudugudu",price:30000,note:"Premium seating",c:"#ff9a5c"},
+ {id:"baba",name:"Ilu Baba Ilu",price:50000,note:"Front section",c:"#e25b7a"},
+ {id:"gba",name:"Gbagede Ilu",price:100000,note:"VIP",c:"#c07bff"},
+ {id:"oba",name:"Oba Ilu",price:200000,note:"VVIP table",c:"#ffd45c"}
+];
+/* ==================================== */
+const $=s=>document.querySelector(s), naira=n=>"₦"+n.toLocaleString("en-NG");
+const qty={}; TIERS.forEach(t=>qty[t.id]=0);
+if(CONFIG.date)$("#fDate").textContent=CONFIG.date;
+if(CONFIG.time)$("#fTime").textContent=CONFIG.time;
+if(CONFIG.venue)$("#fLoc").textContent=CONFIG.venue;
+
+/* talking drum sound: pitch bends like a squeezed drum */
+let ac;
+function talk(){
+  try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();
+  const t=ac.currentTime;[[0,300,200],[.17,380,250],[.34,260,330]].forEach(([d,a,b])=>{
+    const o=ac.createOscillator(),g=ac.createGain();o.type="triangle";
+    o.frequency.setValueAtTime(a,t+d);o.frequency.exponentialRampToValueAtTime(b,t+d+.14);
+    g.gain.setValueAtTime(.0001,t+d);g.gain.exponentialRampToValueAtTime(.5,t+d+.01);g.gain.exponentialRampToValueAtTime(.0001,t+d+.2);
+    o.connect(g).connect(ac.destination);o.start(t+d);o.stop(t+d+.22)})}catch(e){}
+}
+$("#drum").onclick=()=>{const d=$("#drum");d.classList.remove("hit");void d.offsetWidth;d.classList.add("hit");talk()};
+
+function renderTiers(){
+  $("#tiers").innerHTML=TIERS.map(t=>`<div class="tier ${qty[t.id]?'on':''}" style="--c:${t.c}"><div class="bar"></div><div><h3>${t.name}</h3><p>${t.note}</p><div class="price">${naira(t.price)}</div></div>
+  <div class="qty"><button data-i="${t.id}" data-d="-1" aria-label="Remove one ${t.name} ticket">−</button><output>${qty[t.id]}</output><button data-i="${t.id}" data-d="1" aria-label="Add one ${t.name} ticket">+</button></div></div>`).join("");
+}
+$("#tiers").onclick=e=>{const b=e.target.closest("button");if(!b)return;const i=b.dataset.i;qty[i]=Math.max(0,Math.min(50,qty[i]+ +b.dataset.d));renderTiers();summary()};
+const items=()=>TIERS.filter(t=>qty[t.id]).map(t=>({...t,q:qty[t.id]}));
+const total=()=>items().reduce((s,t)=>s+t.q*t.price,0);
+function summary(){
+  const it=items();
+  $("#lines").innerHTML=it.length?it.map(t=>`<div class="line"><span>${t.q} × ${t.name}</span><b>${naira(t.q*t.price)}</b></div>`).join(""):'<p style="margin:0;color:#6b6034">No tickets chosen yet. Add one from the list.</p>';
+  $("#tot").textContent=naira(total());$("#pay").disabled=!it.length;
+}
+renderTiers();summary();
+
+function loadPaystack(){return new Promise(r=>{if(window.PaystackPop)return r(true);const s=document.createElement("script");s.src="https://js.paystack.co/v1/inline.js";s.onload=()=>r(true);s.onerror=()=>r(false);document.head.appendChild(s)})}
+$("#pay").onclick=async()=>{
+  const name=$("#nm").value.trim(),email=$("#em").value.trim(),phone=$("#ph").value.trim();
+  if(name.length<2)return $("#err").textContent="Enter your full name.";
+  if(!/^\S+@\S+\.\S+$/.test(email))return $("#err").textContent="Enter a valid email address.";
+  if(phone.replace(/\D/g,"").length<10)return $("#err").textContent="Enter a valid phone number.";
+  $("#err").textContent="";
+  const order={name,email,phone,items:items(),total:total(),ref:"TNT"+Date.now().toString(36).toUpperCase()+Math.random().toString(36).slice(2,5).toUpperCase()};
+  const ok=CONFIG.paystackKey.indexOf("xxxx")<0&&await loadPaystack();
+  if(ok){
+    PaystackPop.setup({key:CONFIG.paystackKey,email,amount:order.total*100,currency:CONFIG.currency,ref:order.ref,
+      metadata:{name,phone,tickets:order.items.map(t=>t.q+"x "+t.name).join(", ")},
+      callback:r=>success({...order,ref:r.reference}),onClose:()=>{$("#err").textContent="Payment window closed. Your order is still here."}}).openIframe();
+  }else if(confirm("Demo mode: Paystack isn’t connected in this preview.\n\nSimulate a successful payment of "+naira(order.total)+"?")){success(order)}
+};
+
+let ORDER=null,TICKETS=[];
+function success(o){
+  ORDER=o;o.paidAt=new Date();TICKETS=[];
+  o.items.forEach(t=>{for(let i=0;i<t.q;i++)TICKETS.push({tier:t.name,price:t.price,c:t.c,id:o.ref+"-"+String(TICKETS.length+1).padStart(2,"0")})});
+  if(CONFIG.onPaymentSuccess)try{CONFIG.onPaymentSuccess(o.ref,o)}catch(e){}
+  $("#tkList").innerHTML=TICKETS.map((t,i)=>`<div class="tk"><div><b style="color:var(--gold);font-family:'Rozha One',serif;font-size:1.2rem">${t.tier}</b><div style="font-size:.85rem;color:var(--mut)">${t.id} · ${naira(t.price)}</div></div><button class="btn" data-k="${i}">Download ticket</button></div>`).join("");
+  $("#shop").style.display="none";$("#done").classList.add("show");
+  const c=$("#recPv");drawReceipt(c);c.style.display="block";window.scrollTo({top:0,behavior:"smooth"});
+}
+$("#tkList").onclick=e=>{const b=e.target.closest("[data-k]");if(b)saveTicket(TICKETS[b.dataset.k])};
+$("#dlAll").onclick=()=>TICKETS.forEach((t,i)=>setTimeout(()=>saveTicket(t),i*350));
+$("#dlRec").onclick=()=>{const c=document.createElement("canvas");drawReceipt(c);dl(c,"Receipt-"+ORDER.ref)};
+$("#again").onclick=()=>{TIERS.forEach(t=>qty[t.id]=0);renderTiers();summary();$("#done").classList.remove("show");$("#shop").style.display="";$("#recPv").style.display="none"};
+function dl(c,n){const a=document.createElement("a");a.download=n+".png";a.href=c.toDataURL("image/png");document.body.appendChild(a);a.click();a.remove()}
+
+function hashBits(s,n){let h=2166136261,o=[];for(let i=0;i<n;i++){for(const ch of s+i){h^=ch.charCodeAt(0);h=Math.imul(h,16777619)}o.push(1+(Math.abs(h)%4))}return o}
+function saveTicket(t){
+  const c=document.createElement("canvas");c.width=1100;c.height=440;const x=c.getContext("2d");
+  const g=x.createLinearGradient(0,0,1100,440);g.addColorStop(0,"#0c0b1f");g.addColorStop(1,"#1a2468");x.fillStyle=g;x.fillRect(0,0,1100,440);
+  x.strokeStyle="#f0b429";x.lineWidth=6;x.strokeRect(14,14,1072,412);x.lineWidth=1.5;x.strokeRect(26,26,1048,388);
+  x.fillStyle="rgba(240,180,41,.12)";for(let i=0;i<26;i++){x.save();x.translate(30+i*40,40);x.rotate(Math.PI/4);x.fillRect(-7,-7,14,14);x.restore();x.save();x.translate(30+i*40,400);x.rotate(Math.PI/4);x.fillRect(-7,-7,14,14);x.restore()}
+  x.fillStyle="#f0b429";x.font="72px 'Rozha One',serif";x.fillText("Tiwa n Tiwa",60,135);
+  x.fillStyle="#f7ecd2";x.font="34px 'Rozha One',serif";x.fillText("D’Journey",62,180);
+  x.fillStyle=t.c;x.fillRect(60,210,12,120);
+  x.fillStyle="#f7ecd2";x.font="700 22px Figtree,sans-serif";x.fillText("TICKET",90,236);
+  x.fillStyle=t.c;x.font="58px 'Rozha One',serif";x.fillText(t.tier,90,296);
+  x.fillStyle="#b9b4cf";x.font="600 20px Figtree,sans-serif";
+  x.fillText("Holder: "+ORDER.name,90,340);x.fillText("Admits one · "+naira(t.price),90,368);
+  x.fillText((CONFIG.date||"Date to be announced")+"  ·  "+(CONFIG.venue||"Venue to be announced"),60,396);
+  x.setLineDash([8,8]);x.strokeStyle="#f0b429";x.beginPath();x.moveTo(790,40);x.lineTo(790,400);x.stroke();x.setLineDash([]);
+  x.fillStyle="#f7ecd2";x.fillRect(820,70,240,240);
+  try{const q=qrcode(0,"M");q.addData("TNT|"+t.id+"|"+t.tier+"|"+ORDER.name);q.make();const n=q.getModuleCount(),m=Math.floor(224/n),off=820+(240-m*n)/2;
+    x.fillStyle="#0c0b1f";for(let r=0;r<n;r++)for(let k=0;k<n;k++)if(q.isDark(r,k))x.fillRect(off+k*m,70+(240-m*n)/2+r*m,m,m)}
+  catch(e){const b=hashBits(t.id,30);let px=830;x.fillStyle="#0c0b1f";b.forEach((w,i)=>{if(i%2==0)x.fillRect(px,80,w*2.2,220);px+=w*2.6+2;if(px>1050)px=1050})}
+  x.fillStyle="#f7ecd2";x.font="700 18px Figtree,sans-serif";x.textAlign="center";x.fillText(t.id,940,345);x.font="14px Figtree,sans-serif";x.fillStyle="#b9b4cf";x.fillText("Scan at the gate",940,372);
+  x.textAlign="left";dl(c,"Ticket-"+t.id);
+}
+function drawReceipt(c){
+  const o=ORDER,rows=o.items.length;c.width=600;c.height=380+rows*34;const x=c.getContext("2d");
+  x.fillStyle="#f7ecd2";x.fillRect(0,0,c.width,c.height);x.strokeStyle="#c98a12";x.lineWidth=4;x.strokeRect(10,10,c.width-20,c.height-20);
+  x.fillStyle="#0c0b1f";x.fillRect(10,10,c.width-20,70);
+  x.fillStyle="#f0b429";x.font="30px 'Rozha One',serif";x.fillText("Tiwa n Tiwa D’Journey",30,56);
+  x.fillStyle="#0c0b1f";x.font="700 20px Figtree,sans-serif";x.fillText("PAYMENT RECEIPT",30,112);
+  x.font="15px Figtree,sans-serif";x.fillStyle="#3b3520";
+  [["Reference",o.ref],["Paid on",o.paidAt.toLocaleString("en-NG")],["Name",o.name],["Email",o.email],["Phone",o.phone]].forEach((r,i)=>{x.fillText(r[0],30,145+i*24);x.fillText(r[1],160,145+i*24)});
+  let y=290;x.fillStyle="#0c0b1f";x.font="700 15px Figtree,sans-serif";x.fillText("Item",30,y);x.textAlign="right";x.fillText("Amount",570,y);x.textAlign="left";
+  x.strokeStyle="#8b7a45";x.beginPath();x.moveTo(30,y+8);x.lineTo(570,y+8);x.stroke();
+  x.font="15px Figtree,sans-serif";o.items.forEach(t=>{y+=34;x.fillText(t.q+" × "+t.name+" @ "+naira(t.price),30,y);x.textAlign="right";x.fillText(naira(t.q*t.price),570,y);x.textAlign="left"});
+  y+=46;x.font="26px 'Rozha One',serif";x.fillText("Total paid",30,y);x.textAlign="right";x.fillText(naira(o.total),570,y);x.textAlign="left";
+  x.font="13px Figtree,sans-serif";x.fillStyle="#6b6034";x.fillText("Status: PAID via Paystack · Keep this receipt with your tickets · 0904 5791 503",30,y+36);
+}
+</script>
+</body>
+</html>
